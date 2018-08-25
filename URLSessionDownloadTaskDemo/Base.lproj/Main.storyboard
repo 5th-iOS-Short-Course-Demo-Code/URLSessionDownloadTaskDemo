@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="URLSessionDownloadTaskDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Se1-VZ-BYf">
+                                <rect key="frame" x="16" y="30" width="343" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="kDg-en-icK"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wvc-Ih-uMO">
+                                <rect key="frame" x="16" y="241" width="343" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBG-sF-tGy">
+                                <rect key="frame" x="153" y="265" width="69" height="30"/>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="downloadClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLp-bI-KlS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Se1-VZ-BYf" secondAttribute="trailing" constant="16" id="2fH-7j-hMJ"/>
+                            <constraint firstItem="Wvc-Ih-uMO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Qd-4H-iM0"/>
+                            <constraint firstItem="tBG-sF-tGy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BDd-Wv-V0O"/>
+                            <constraint firstItem="Se1-VZ-BYf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="agp-8r-PsD"/>
+                            <constraint firstItem="tBG-sF-tGy" firstAttribute="top" secondItem="Wvc-Ih-uMO" secondAttribute="bottom" constant="22" id="bHC-zX-IKE"/>
+                            <constraint firstItem="Wvc-Ih-uMO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="m0i-bh-zUo"/>
+                            <constraint firstItem="Wvc-Ih-uMO" firstAttribute="top" secondItem="Se1-VZ-BYf" secondAttribute="bottom" constant="36" id="ran-3O-FVv"/>
+                            <constraint firstItem="Se1-VZ-BYf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="vyz-C0-Uup"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Se1-VZ-BYf" id="Azg-Pk-7lQ"/>
+                        <outlet property="progressView" destination="Wvc-Ih-uMO" id="7Du-cg-ffh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
